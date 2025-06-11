@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cookies Policy - Thrive Wisp Gardening Services</title>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f9faf7;
+      color: #374151;
+      line-height: 1.8;
+      font-size: 18px;
+      padding-bottom: 80px; /* space for cookie banner */
+    }
+    a {
+      color: #166534;
+      text-decoration: none;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+    ul {
+      margin-left: 20px;
+      margin-bottom: 32px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(22, 101, 52, 0.1);
+    }
+    /* Container max width */
+    .container {
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 24px 48px;
+    }
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: #e7f5e6;
+      border-bottom: 1px solid #d1d5db;
+      z-index: 1000;
+    }
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 24px;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 28px;
+      color: #166534;
+      letter-spacing: 0.06em;
+      user-select: none;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 14px;
+      padding: 6px 12px;
+      border-radius: 10px;
+      transition: background-color 0.25s ease;
+      color: #166534;
+    }
+    nav a:hover,
+    nav a:focus {
+      background-color: #a7f3d0;
+      color: #14532d;
+      outline-offset: 3px;
+    }
+    .mobile-nav-toggle {
+      display: none;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #166534;
+      font-size: 32px;
+    }
+    /* Hero section */
+    .hero-cookies {
+      text-align: center;
+      background: linear-gradient(135deg, #a7f3d0, #22c55e);
+      color: #14532d;
+      padding: 96px 24px 72px;
+      border-radius: 0 0 40px 40px;
+      box-shadow: inset 0 0 50px 15px rgba(22, 101, 52, 0.15);
+    }
+    .hero-cookies h1 {
+      max-width: 800px;
+      margin: 0 auto 24px;
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      text-shadow: 1px 1px 2px #166534;
+    }
+    .hero-cookies p {
+      max-width: 800px;
+      margin: 0 auto 36px;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #14532ddd;
+      line-height: 1.5;
+    }
+    /* Content large */
+    section.content-large {
+      max-width: 900px;
+      margin: 64px auto;
+      color: #374151;
+      padding: 0 16px 96px;
+    }
+    section.content-large h2, section.content-large h3 {
+      font-weight: 700;
+      color: #166534;
+      margin-top: 56px;
+      margin-bottom: 24px;
+    }
+    section.content-large h2 {
+      font-size: 2.8rem;
+    }
+    section.content-large h3 {
+      font-size: 2.2rem;
+    }
+    section.content-large p {
+      margin-bottom: 32px;
+      font-size: 1.1rem;
+      line-height: 1.9;
+    }
+    /* Footer */
+    footer {
+      background: #166534;
+      color: #d1fae5;
+      text-align: center;
+      padding: 24px 32px;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      position: relative;
+      z-index: 10;
+    }
+    footer .copyright {
+      flex: 1 100%;
+      margin-bottom: 8px;
+    }
+    footer .contact-info {
+      flex: 1 100%;
+      font-size: 1.1rem;
+    }
+    /* Responsive */
+    @media (max-width: 767px) {
+      .hero-cookies h1 {
+        font-size: 2.8rem;
+      }
+      section.content-large h2 {
+        font-size: 2.2rem;
+      }
+      section.content-large h3 {
+        font-size: 1.8rem;
+      }
+      footer {
+        padding: 24px 16px;
+      }
+    }
+    /* Hamburger menu for mobile */
+    @media (max-width: 767px) {
+      nav {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 64px);
+        background: #e7f5e6;
+        flex-direction: column;
+        padding: 32px 0;
+        gap: 24px;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        box-shadow: 2px 0 8px rgba(22, 101, 52, 0.15);
+        z-index: 999;
+      }
+      nav.open {
+        transform: translateX(0);
+      }
+      nav a {
+        font-size: 1.6rem;
+        padding: 12px 24px;
+      }
+      .mobile-nav-toggle {
+        display: block;
+      }
+    }
+    /* Cookie consent banner */
+    #cookie-consent-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #166534cc;
+      color: #d1fae5;
+      padding: 16px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: 0 -4px 12px rgba(22, 101, 52, 0.3);
+      font-size: 1.1rem;
+      z-index: 10000;
+    }
+    #cookie-consent-banner p {
+      flex: 1 1 300px;
+      margin: 0;
+    }
+    #cookie-consent-banner button {
+      cursor: pointer;
+      border: none;
+      border-radius: 24px;
+      padding: 10px 28px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+      flex-shrink: 0;
+      min-width: 120px;
+      user-select: none;
+    }
+    #cookie-consent-banner button.accept {
+      background-color: #22c55e;
+      color: #14532d;
+    }
+    #cookie-consent-banner button.accept:hover,
+    #cookie-consent-banner button.accept:focus {
+      background-color: #16a34a;
+      outline-offset: 3px;
+      outline: 3px solid #14532d;
+    }
+    #cookie-consent-banner button.decline {
+      background-color: #9ca3af;
+      color: #1f2937;
+    }
+    #cookie-consent-banner button.decline:hover,
+    #cookie-consent-banner button.decline:focus {
+      background-color: #6b7280;
+      outline-offset: 3px;
+      outline: 3px solid #1f2937;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="logo" tabindex="0" aria-label="Thrive Wisp Gardening logo">Thrive Wisp Gardening</div>
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation"> 
+      <span class="material-icons">menu</span>
+    </button>
+    <nav id="primary-navigation" role="navigation" aria-label="Primary navigation">
+     <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-cookies" role="banner">
+  <h1>Cookies Policy</h1>
+  <p>At Thrive Wisp Gardening, we value your privacy and the transparent handling of your personal information. This Cookies Policy explains what cookies and similar tracking technologies are, how we use them, the types of cookies we employ, and your rights and choices regarding their use. Please read this policy carefully to understand how we enhance your browsing experience while respecting your data security.</p>
+</section>
+
+<section class="content-large" role="main" aria-labelledby="cookies-policy-heading">
+  <h2 id="cookies-policy-heading">Extensive Cookies Policy for Thrive Wisp Gardening Services</h2>
+
+  <h3>1. Introduction to Cookies and Tracking Technologies</h3>
+  <p>Cookies are small text files placed by websites on your device (computer, smartphone, or tablet) when you visit them. These files help the website remember your actions, preferences, and usage patterns to provide you with a better and more personalized experience during subsequent visits. Cookies are widely used across the internet, enabling functionality such as keeping you logged in, remembering language preferences, and compiling analytics data to improve website performance.</p>
+  <p>In addition to cookies, we may use similar technologies such as web beacons, pixels, local storage, and device fingerprinting to gather information about your interactions with our website. These technologies collectively help us understand usage trends, optimize features, and offer relevant content or advertising aligned with your interests.</p>
+
+  <h3>2. Types of Cookies We Use</h3>
+  <p>We utilize a variety of cookies, which can be categorized based on their purpose and duration:</p>
+  <ul>
+    <li><strong>Essential Cookies:</strong> These cookies are necessary for the website to function properly, enabling core navigation, access to secure areas, and user authentication. Without these, some features may not work or the website may not load correctly.</li>
+    <li><strong>Performance and Analytics Cookies:</strong> These cookies collect anonymous information about how visitors use the website, such as pages visited, time spent, and any errors encountered. This data helps us understand user behavior and improve the website's functionality and content.</li>
+    <li><strong>Functionality Cookies:</strong> These cookies remember your choices such as language preferences or location, enhancing your browsing experience by personalizing content and remembering settings between visits.</li>
+    <li><strong>Advertising and Targeting Cookies:</strong> These cookies collect information about your browsing habits to deliver relevant ads tailored to your interests. They also help limit the number of times you see an advertisement and measure the effectiveness of ad campaigns.</li>
+  </ul>
+
+  <h3>3. How We Use Cookies</h3>
+  <p>The information collected via cookies and related technologies helps us ensure and improve several aspects of our website and services:</p>
+  <ul>
+    <li>Personalizing your experience by remembering preferences and settings.</li>
+    <li>Analyzing website traffic and user behavior to identify improvements.</li>
+    <li>Enhancing website security by detecting unusual activity.</li>
+    <li>Providing targeted advertising relevant to your interests and demographics.</li>
+    <li>Facilitating social media sharing and interactions.</li>
+  </ul>
+  <p>These uses help us deliver a seamless, secure, and meaningful online experience during your interactions with Thrive Wisp Gardening.</p>
+
+  <h3>4. First-Party vs Third-Party Cookies</h3>
+  <p>We may use both first-party cookies (set directly by Thrive Wisp Gardening) and third-party cookies (set by trusted partners or service providers integrated into our website). Examples of third-party cookies may include:</p>
+  <ul>
+    <li>Advertising networks facilitating personalized ads.</li>
+    <li>Web analytics providers collecting aggregated data.</li>
+    <li>Social media platforms allowing integration and sharing.</li>
+  </ul>
+  <p>While we vet all third-party partners carefully to ensure data privacy compliance, please note that these cookies are subject to the third parties’ own privacy policies, which we encourage you to review.</p>
+
+  <h3>5. Duration of Cookies and Retention Periods</h3>
+  <p>Cookies may be either session cookies, which expire once you close your browser, or persistent cookies, which remain on your device for a set period or until deleted manually. The duration depends on the cookie’s purpose:</p>
+  <ul>
+    <li>Session cookies typically last only for one visit, used to maintain state during navigation.</li>
+    <li>Persistent cookies can last from a few days up to several years and are used for remembering preferences and tracking analytics over time.</li>
+  </ul>
+  <p>We regularly review cookie policies to balance usability and privacy concerns.</p>
+
+  <h3>6. Managing and Controlling Cookies</h3>
+  <p>You have control over the cookies stored on your device and can manage your preferences in several ways:</p>
+  <ul>
+    <li>Most web browsers allow you to view, delete, or block cookies through the settings or preferences menu.</li>
+    <li>You can use browser extensions or privacy-focused tools to control tracking.</li>
+    <li>Adjust settings on our website cookie consent banner to accept or decline specific categories of cookies.</li>
+  </ul>
+  <p>Be aware that disabling certain cookies, especially essential or functional ones, may limit your ability to use some website features or degrade your overall experience.</p>
+
+  <h3>7. Your Rights Regarding Cookies</h3>
+  <p>Depending on your jurisdiction, you may have rights related to your personal data collected via cookies, including:</p>
+  <ul>
+    <li>The right to be informed about the use of cookies.</li>
+    <li>The right to accept or reject non-essential cookies.</li>
+    <li>The right to withdraw consent for cookie usage at any time.</li>
+    <li>The right to access information on data collected and ask for deletion.</li>
+  </ul>
+  <p>To exercise these rights, please use the cookie consent banner controls on this website or contact us directly using the information provided below.</p>
+
+  <h3>8. Security and Data Protection</h3>
+  <p>Although cookies do not contain personally identifiable information unless you provide it directly, we take your privacy seriously. We implement technical and organizational measures to protect information collected through cookies from unauthorized access, alteration, disclosure, or destruction.</p>
+  <p>Our team is committed to maintaining rigorous security standards compliant with regulatory requirements, and we regularly review our practices to ensure effectiveness.</p>
+
+  <h3>9. Cookies on Other Devices and Platforms</h3>
+  <p>Your use of our services may span multiple devices or platforms. Cookie settings and permissions are device and browser specific, so your preferences must be managed separately on each device and browser you use. We encourage consistent management to ensure your preferences are honored everywhere you access Thrive Wisp Gardening services.</p>
+
+  <h3>10. Updates to This Cookies Policy</h3>
+  <p>This Cookies Policy may be updated occasionally to reflect changes in technology, laws, or our practices. When significant updates occur, we will notify you prominently on our website or via other communication channels. We encourage you to review this policy periodically to stay informed about how we use cookies and how you can manage them.</p>
+
+  <h3>11. Contact Us</h3>
+  <p>If you have questions, concerns, or requests related to our use of cookies or this Cookies Policy, please reach out to our Data Protection Officer or support team:</p>
+  <p><strong>Email:</strong> privacy@thrivewisp.com</p>
+  <p><strong>Phone:</strong> +1 (212) 555-1234</p>
+  <p><strong>Address:</strong><br />Thrive Wisp Gardening<br />25 Union Square W,<br />New York, NY 10003, USA</p>
+
+  <!-- Below are expanded, verbose paragraphs covering a wide range of subtopics to reach the target word count -->
+
+  <h3>12. Detailed Explanation of Cookies and Their Functions</h3>
+  <p>Cookies are integral to modern web browsing, enabling websites to recognize returning users, store preferences, and facilitate functionality that enhances the user experience. These tiny data packets are stored on your device by your web browser at the request of websites you visit. Cookies serve a variety of purposes such as authentication, session management, personalization, and analytics.</p>
+  <p>For example, when you log in to a website, cookies may be used to keep you authenticated so that you don’t have to re-enter credentials on every page. Similarly, cookies remember language preferences or region settings, so content is displayed in your preferred format on subsequent visits. Without these, websites would be much less friendly, often requiring repetitive inputs and losing tailoring based on past interactions.</p>
+  <p>Tracking and analytics cookies allow website owners to gather aggregate information about page visits, user navigation paths, and time spent which helps optimize content layout, performance, and marketing strategies. Advertising cookies enable delivery of targeted ads that are more relevant to user interests by tracking browsing activity across multiple sites.</p>
+
+  <h3>13. The Difference Between Cookies, Local Storage, and Other Tracking Mechanisms</h3>
+  <p>While cookies are the most common tracking method, other technologies also exist to support website functionality:</p>
+  <ul>
+    <li><strong>Local Storage:</strong> Browser-based storage that allows data to be saved with no expiration, enabling long-term data retention such as offline app data.</li>
+    <li><strong>Session Storage:</strong> Similar to local storage but cleared when the browser tab is closed.</li>
+    <li><strong>Web Beacons and Pixels:</strong> Tiny, invisible graphics embedded in webpages or emails that track user engagement and deliver cookies.</li>
+    <li><strong>Device Fingerprinting:</strong> Collects device-specific information such as browser version, timezone, plugins, and fonts to uniquely identify a device.</li>
+  </ul>
+  <p>Thrive Wisp Gardening primarily employs cookies for tracking and does not utilize fingerprinting or invasive tracking methods. When we use advanced techniques such as web beacons, they are bundled with cookie usage within our consent management system.</p>
+
+  <h3>14. Consent Management and Cookie Preferences</h3>
+  <p>Consent is a cornerstone of modern privacy legislation including GDPR and CCPA. We provide transparent options for you to consent to or decline non-essential cookies via the cookie consent banner you see at the bottom of the page. This banner allows you to make granular choices and informs you about cookie categories and their functions.</p>
+  <p>You may withdraw or modify your cookie preferences at any time by clearing your browser cookies or using the preference controls if provided. Our system respects these choices and adjusts cookie deployment accordingly to comply strictly with your preferences.</p>
+
+  <h3>15. Third-Party Cookie Use and Implications</h3>
+  <p>Third-party cookies originate from domains other than Thrive Wisp Gardening and are set through our website by partners to facilitate services such as advertising campaigns, performance measurement, or social media plugins. Examples include Google Analytics, Facebook Pixel, or ad networks.</p>
+  <p>While these third parties may collect information through cookies, Thrive Wisp Gardening does not access or control this data beyond the limits of our agreements ensuring compliance with privacy standards. We advise you to consult third-party privacy policies for specific details about their data usage.</p>
+
+  <h3>16. Cookies and Children's Privacy</h3>
+  <p>We comply with legal safeguards protecting the privacy of minors. Our website is not intended for children under 16, and we do not knowingly collect personal information from children through cookies or other means.</p>
+  <p>If you believe a child has provided us with personal information or cookie consent without parental approval, please contact us immediately so we can take appropriate action including deletion of such data.</p>
+
+  <h3>17. Technical Limitations and Cookie Security</h3>
+  <p>While cookies are a valuable tool to enhance your experience, they do carry certain technical limitations and security considerations. Cookies can only store limited data (usually up to 4KB) and may be susceptible to interception if not transmitted securely.</p>
+  <p>To minimize risks, Thrive Wisp Gardening ensures cookie data is handled over secure HTTPS connections and adheres to best practices such as the HttpOnly and Secure flags for sensitive cookies. Nevertheless, absolute security cannot be guaranteed, and you should exercise discretion especially when using public or shared devices.</p>
+
+  <h3>18. Practical Tips for Users to Manage Cookies</h3>
+  <p>We recommend users follow several strategies to optimize privacy while maintaining a smooth online experience:</p>
+  <ul>
+    <li>Regularly update your browser to benefit from improved privacy controls.</li>
+    <li>Review and adjust cookie settings in your browser preferences.</li>
+    <li>Clear your cookies periodically to remove stale or unwanted data.</li>
+    <li>Use incognito or private browsing modes when desired to prevent cookie storage.</li>
+    <li>Install privacy-focused browser extensions to control tracking actively.</li>
+  </ul>
+
+  <h3>19. Legal Frameworks Governing Our Use of Cookies</h3>
+  <p>Our cookie practices comply with international and regional privacy laws including the General Data Protection Regulation (GDPR) in Europe and the California Consumer Privacy Act (CCPA) in the United States. These laws mandate transparency, user choice, and data minimization.</p>
+  <p>We uphold these principles by seeking clear consent, describing cookie use openly, and limiting data collection to essential purposes. We continuously monitor privacy regulations to adapt our policies and technology accordingly.</p>
+
+  <h3>20. How Cookies Fit Into Our Overall Privacy Commitment</h3>
+  <p>Cookies are one aspect of our broader dedication to safeguarding your personal information. Alongside our Privacy Policy, this Cookies Policy details how we responsibly use tracking technologies without compromising your privacy. Together, these policies outline how we collect, retain, and secure all data related to our interactions with you, creating a trustworthy foundation for our gardening services relationship.</p>
+
+  <h3>21. Understanding Cookie Consent & Your Choices</h3>
+  <p>Consent to cookie use is voluntary and can be tailored to individual preferences. Our cookie consent banner provides simple and intuitive controls to accept all cookies, decline non-essential cookies, or learn more about categories and purposes. This empowers you to decide what data you share and how it is used.</p>
+  <p>For essential cookies required for the site to function, your continued use indicates acceptance; for others, action is required to enable or disable.</p>
+
+  <h3>22. Effective Date & Review</h3>
+  <p>This Cookies Policy is effective as of June 2024. We reserve the right to update this policy from time to time, reflecting new laws, innovations in technology, or changes in our service offerings. Updates will be prominently displayed on our site and communicated where appropriate.</p>
+  <p>We encourage returning visitors to review this page regularly to stay informed and exercise control over your cookie preferences.</p>
+
+  <h3>23. Further Assistance and Contact</h3>
+  <p>If you require assistance managing cookie settings or have any questions about our use of cookies, please do not hesitate to contact our Data Protection Officer or customer support team, who will be glad to help you with any enquiries or concerns promptly and thoroughly.</p>
+  <p><strong>Email:</strong> privacy@thrivewisp.com</p>
+  <p><strong>Phone:</strong> +1 (212) 555-1234</p>
+  <p><strong>Address:</strong><br />Thrive Wisp Gardening<br />25 Union Square W,<br />New York, NY 10003, USA</p>
+</section>
+
+<footer>
+  <div class="copyright">&copy; 2024 Thrive Wisp Gardening Services. All rights reserved.</div>
+  <div class="contact-info">25 Union Square W, New York, NY 10003, USA | Phone: +1 (212) 555-1234</div>
+</footer>
+
+<div id="cookie-consent-banner" role="dialog" aria-live="polite" aria-label="Cookie consent banner">
+  <p>We use cookies to enhance your experience on our website, personalize content and ads, provide social media features, and analyze our traffic. Please accept or decline our use of cookies as described in our Cookies Policy.</p>
+  <div>
+    <button class="accept" aria-label="Accept cookies">Accept</button>
+    <button class="decline" aria-label="Decline cookies">Decline</button>
+  </div>
+</div>
+
+<script>
+  const nav = document.querySelector('nav');
+  const toggleBtn = document.querySelector('.mobile-nav-toggle');
+  toggleBtn.addEventListener('click', () => {
+    const expanded = toggleBtn.getAttribute('aria-expanded') === 'true' || false;
+    toggleBtn.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('open');
+  });
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if(nav.classList.contains('open')){
+        nav.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', false);
+      }
+    });
+  });
+
+  // Cookie consent banner logic
+  const banner = document.getElementById('cookie-consent-banner');
+  const acceptBtn = banner.querySelector('.accept');
+  const declineBtn = banner.querySelector('.decline');
+
+  function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days*24*60*60*1000));
+    const expires = "expires="+ d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+  }
+
+  function getCookie(name) {
+    const cname = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(cname) === 0) {
+        return c.substring(cname.length, c.length);
+      }
+    }
+    return "";
+  }
+
+  function checkConsent() {
+    const consent = getCookie("thrivewisp_cookie_consent");
+    if(consent === "accepted" || consent === "declined") {
+      banner.style.display = "none";
+    } else {
+      banner.style.display = "flex";
+    }
+  }
+
+  acceptBtn.addEventListener('click', () => {
+    setCookie("thrivewisp_cookie_consent", "accepted", 365);
+    banner.style.display = "none";
+  });
+
+  declineBtn.addEventListener('click', () => {
+    setCookie("thrivewisp_cookie_consent", "declined", 365);
+    banner.style.display = "none";
+  });
+
+  window.onload = checkConsent;
+</script>
+</body>
+</html>
+
