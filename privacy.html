@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy - Thrive Wisp Gardening Services</title>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f9faf7;
+      color: #374151;
+      line-height: 1.8;
+      font-size: 18px;
+    }
+    a {
+      color: #166534;
+      text-decoration: none;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(22, 101, 52, 0.1);
+    }
+    /* Container max width */
+    .container {
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 24px 48px;
+    }
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: #e7f5e6;
+      border-bottom: 1px solid #d1d5db;
+      z-index: 1000;
+    }
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 24px;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 28px;
+      color: #166534;
+      letter-spacing: 0.06em;
+      user-select: none;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 14px;
+      padding: 6px 12px;
+      border-radius: 10px;
+      transition: background-color 0.25s ease;
+      color: #166534;
+    }
+    nav a:hover,
+    nav a:focus {
+      background-color: #a7f3d0;
+      color: #14532d;
+      outline-offset: 3px;
+    }
+    .mobile-nav-toggle {
+      display: none;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #166534;
+      font-size: 32px;
+    }
+    /* Hero section */
+    .hero-privacy {
+      text-align: center;
+      background: linear-gradient(135deg, #a7f3d0, #22c55e);
+      color: #14532d;
+      padding: 96px 24px 72px;
+      border-radius: 0 0 40px 40px;
+      box-shadow: inset 0 0 50px 15px rgba(22, 101, 52, 0.15);
+    }
+    .hero-privacy h1 {
+      max-width: 800px;
+      margin: 0 auto 24px;
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      text-shadow: 1px 1px 2px #166534;
+    }
+    .hero-privacy p {
+      max-width: 800px;
+      margin: 0 auto 36px;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #14532ddd;
+      line-height: 1.5;
+    }
+    /* Content large */
+    section.content-large {
+      max-width: 900px;
+      margin: 64px auto;
+      color: #374151;
+      padding: 0 16px 96px;
+    }
+    section.content-large h2, section.content-large h3 {
+      font-weight: 700;
+      color: #166534;
+      margin-top: 56px;
+      margin-bottom: 24px;
+    }
+    section.content-large h2 {
+      font-size: 2.8rem;
+    }
+    section.content-large h3 {
+      font-size: 2.2rem;
+    }
+    section.content-large p {
+      margin-bottom: 32px;
+      font-size: 1.1rem;
+      line-height: 1.9;
+    }
+    /* Footer */
+    footer {
+      background: #166534;
+      color: #d1fae5;
+      text-align: center;
+      padding: 24px 32px;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+    footer .copyright {
+      flex: 1 100%;
+      margin-bottom: 8px;
+    }
+    footer .contact-info {
+      flex: 1 100%;
+      font-size: 1.1rem;
+    }
+    /* Responsive */
+    @media (max-width: 767px) {
+      .hero-privacy h1 {
+        font-size: 2.8rem;
+      }
+      section.content-large h2 {
+        font-size: 2.2rem;
+      }
+      section.content-large h3 {
+        font-size: 1.8rem;
+      }
+      footer {
+        padding: 24px 16px;
+      }
+    }
+    /* Hamburger menu for mobile */
+    @media (max-width: 767px) {
+      nav {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 64px);
+        background: #e7f5e6;
+        flex-direction: column;
+        padding: 32px 0;
+        gap: 24px;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        box-shadow: 2px 0 8px rgba(22, 101, 52, 0.15);
+        z-index: 999;
+      }
+      nav.open {
+        transform: translateX(0);
+      }
+      nav a {
+        font-size: 1.6rem;
+        padding: 12px 24px;
+      }
+      .mobile-nav-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="logo" tabindex="0" aria-label="Thrive Wisp Gardening logo">Thrive Wisp Gardening</div>
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation"> 
+      <span class="material-icons">menu</span>
+    </button>
+    <nav id="primary-navigation" role="navigation" aria-label="Primary navigation">
+    <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0"aria-current="page">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-privacy" role="banner">
+  <h1>Privacy Policy</h1>
+  <p>Your privacy is of paramount importance to us at Thrive Wisp Gardening. This comprehensive Privacy Policy details how we collect, use, disclose, and protect any personal information we obtain from you while ensuring full transparency and compliance with applicable laws and regulations. We encourage you to read this policy carefully to understand your rights and our obligations.</p>
+</section>
+
+<section class="content-large" role="main" aria-labelledby="privacy-policy-heading">
+  <h2 id="privacy-policy-heading">Comprehensive Privacy Policy for Thrive Wisp Gardening</h2>
+
+  <h3>1. Introduction and Overview</h3>
+  <p>Thrive Wisp Gardening ("we," "us," or "our") is committed to respecting and protecting your privacy. We recognize the importance of securing your personal data while providing top-tier gardening services that enrich your environment. This policy explains what information we collect, how we use it, the choices you have concerning your data, and measures we have in place to safeguard your privacy throughout your interactions with our services—whether through our website, mobile application, or direct communication.</p>
+  <p>We aim to provide full transparency about our data practices, maintaining the highest standards of confidentiality and security. By using our services or accessing our website, you consent to the terms outlined in this privacy policy. We encourage you to periodically review this policy, as we may update it to reflect changes in our practices or regulatory requirements.</p>
+  <p>The following sections provide detailed explanations about types of information we collect, methods of collection, storage duration, and your rights concerning your personal information.</p>
+
+  <h3>2. Information We Collect</h3>
+  <p>We collect various categories of personal and non-personal information to facilitate efficient service delivery and enhance your user experience. The types of data we collect are categorized as follows:</p>
+  <ul>
+    <li><strong>Personal Identifiable Information (PII):</strong> This includes your full name, postal address, email address, phone number, payment details, and any other information you voluntarily provide during service inquiries, bookings, or communications.</li>
+    <li><strong>Usage Data:</strong> Information on how you access and use our website and services, such as IP address, device information, browser type, pages visited, time spent on pages, referral sources, and clickthrough rates.</li>
+    <li><strong>Cookies and Tracking Technologies:</strong> We utilize cookies and similar technologies to enhance website functionality, remember preferences, and gather analytic data for improving site performance and user experience.</li>
+    <li><strong>Communication Data:</strong> Any correspondence we receive from you via emails, phone calls, chat, or feedback forms, which may include personal or sensitive information you share voluntarily.</li>
+  </ul>
+  <p>We collect this information responsibly and only to the extent necessary to fulfill the purposes defined in this privacy statement, taking care to minimize data collection to what is relevant and appropriate.</p>
+
+  <h3>3. How We Collect Your Information</h3>
+  <p>Your information is collected through multiple channels, ensuring a seamless and secure user experience:</p>
+  <ul>
+    <li><strong>Direct Interactions:</strong> Information you provide by filling in forms on our website, communicating with our customer service team, or purchasing our gardening services.</li>
+    <li><strong>Automated Technologies:</strong> As you interact with our site, tools such as cookies, web beacons, and tracking pixels collect usage data automatically to improve and personalize your experience.</li>
+    <li><strong>Third-party Sources:</strong> With your consent, we may receive information from third-party services such as payment processors, analytics providers, or social media platforms, which help us to verify your identity or improve services.</li>
+  </ul>
+  <p>We ensure that any data received from third parties complies with applicable privacy laws and that the transfer is lawful and secure.</p>
+
+  <h3>4. Purposes for Processing Your Information</h3>
+  <p>We process your personal data for legitimate business purposes and where necessary to provide you with our gardening services efficiently and securely:</p>
+  <ul>
+    <li>To manage your bookings, provide customer support, and deliver tailored gardening solutions that meet your unique needs.</li>
+    <li>To personalize your online experience and improve our website functionality.</li>
+    <li>To communicate service updates, offers, or other information related to our gardening services, only where you have given explicit consent.</li>
+    <li>To comply with legal obligations and prevent fraud or misuse of our services.</li>
+    <li>To analyze customer behavior and improve our marketing, operational efficiency, and service quality.</li>
+  </ul>
+  <p>We ensure that your data is not used beyond these specified purposes without your knowledge and consent.</p>
+
+  <h3>5. Legal Bases for Processing</h3>
+  <p>Under applicable data protection laws, particularly the GDPR (General Data Protection Regulation), we process your personal information based on the following legal grounds:</p>
+  <ul>
+    <li><strong>Consent:</strong> When you explicitly agree to certain uses of your data, such as signing up for newsletters or marketing communications.</li>
+    <li><strong>Contractual Necessity:</strong> To fulfill our contractual obligations with you, including service provision and payment processing.</li>
+    <li><strong>Legitimate Interests:</strong> For business activities like improving services, conducting marketing, or preventing fraud, balanced against your rights and expectations.</li>
+    <li><strong>Legal Compliance:</strong> To comply with statutory or regulatory requirements.</li>
+  </ul>
+  <p>We will inform you of the specific legal basis when we collect your personal information and where consent is required, allow you to withdraw it at any time.</p>
+
+  <h3>6. Sharing and Disclosure of Information</h3>
+  <p>We do not sell or rent your personal information to third parties for marketing purposes. However, we may share your data with trusted third parties for the purposes outlined in this policy:</p>
+  <ul>
+    <li><strong>Service Providers:</strong> Companies that assist us with professional services such as payment processing, IT support, marketing, and customer service.</li>
+    <li><strong>Legal and Regulatory Authorities:</strong> When required by law or to protect our rights and property.</li>
+    <li><strong>Business Transfers:</strong> In case of mergers, acquisitions or asset sales, your data may be transferred as part of the business assets.</li>
+  </ul>
+  <p>All third-party recipients are contractually bound to protect your data and use it exclusively for specified services.</p>
+
+  <h3>7. Cookies and Tracking Technologies</h3>
+  <p>Cookies are small text files stored on your device to enhance your browsing experience. We use cookies for the following purposes:</p>
+  <ul>
+    <li><strong>Essential Cookies:</strong> Required to enable core website functions, such as navigation and access to secure areas.</li>
+    <li><strong>Performance and Analytics Cookies:</strong> Collect anonymous data on website usage, allowing us to improve performance and content.</li>
+    <li><strong>Functional Cookies:</strong> Remember your preferences and personalize your experience.</li>
+    <li><strong>Advertising and Targeting Cookies:</strong> Used to deliver relevant promotional content and measure ad effectiveness.</li>
+  </ul>
+  <p>You may manage cookie preferences through your browser settings or consent management tools provided on our website. Please note disabling certain cookies may limit or impair your website experience.</p>
+
+  <h3>8. Data Security</h3>
+  <p>Protecting your personal information is paramount to us. We employ multiple technical and organizational safeguards, including encryption, firewalls, secure servers, and strict access controls to prevent unauthorized access, disclosure, or loss.</p>
+  <p>Our employees and contractors receive privacy and security training to uphold our commitment. Nevertheless, no method of transmission or storage is completely secure; thus, we cannot guarantee absolute security but continuously strive to maximize protection.</p>
+
+  <h3>9. Your Rights</h3>
+  <p>You have the right to:</p>
+  <ul>
+    <li>Access the personal data we hold about you.</li>
+    <li>Request correction or deletion of inaccurate or incomplete data.</li>
+    <li>Object to processing where applicable, including marketing communications.</li>
+    <li>Request restriction of processing under certain conditions.</li>
+    <li>Data portability requests for information you have provided.</li>
+    <li>Withdraw consent at any time where processing is based on it.</li>
+    <li>Lodge a complaint with your local data protection authority if you believe your rights have been violated.</li>
+  </ul>
+  <p>To exercise these rights, please contact us using the contact details provided below. We will respond within the timeframe required by applicable laws.</p>
+
+  <h3>10. Data Retention</h3>
+  <p>We retain your personal information only for as long as necessary to fulfill the purposes stated in this policy or comply with legal obligations. Criteria used to determine retention periods include:</p>
+  <ul>
+    <li>The length of the service relationship and business needs.</li>
+    <li>Compliance with tax, accounting, and legal retention requirements.</li>
+    <li>Claims or disputes resolution periods.</li>
+  </ul>
+  <p>After the retention period ends, your personal information is securely deleted, anonymized, or aggregated in accordance with industry best practices to prevent unauthorized access or use.</p>
+
+  <h3>11. Children’s Privacy</h3>
+  <p>Our services are intended for adults and we do not knowingly collect personal data from individuals under the age of 16 without parental consent, in accordance with applicable laws such as COPPA. If you believe we have inadvertently collected data from a child without consent, please contact us immediately, and we will take prompt steps to delete such information.</p>
+  <p>We encourage parents and guardians to monitor their children's online activities and educate them about information sharing online.</p>
+
+  <h3>12. International Data Transfers</h3>
+  <p>Your personal information may be processed or stored in locations outside your country of residence, subject to applicable privacy protections. When transferring data internationally, we ensure compliance with regulatory requirements by employing appropriate safeguards, including:</p>
+  <ul>
+    <li>Data transfer agreements approved by relevant authorities.</li>
+    <li>Standard contractual clauses that enforce privacy protection.</li>
+    <li>Limited data access only to authorized personnel bound by confidentiality.</li>
+  </ul>
+  <p>We remain committed to protecting your information regardless of where it is processed globally.</p>
+
+  <h3>13. Changes to This Privacy Policy</h3>
+  <p>We reserve the right to update or modify this privacy policy at any time to reflect changes in business practices, technology, legal requirements, or user feedback. When significant updates occur, we will notify you by prominent announcements on our website or email communications when appropriate.</p>
+  <p>We encourage you to review this page periodically to stay informed about how we protect your data and your rights. Your continued use of our services after such modifications constitutes your acceptance of the updated policy.</p>
+
+  <h3>14. Contact Information</h3>
+  <p>If you have any questions, concerns, or requests related to this Privacy Policy or our data collection practices, please contact our Data Protection Officer at:</p>
+  <p><strong>Email:</strong> privacy@thrivewisp.com</p>
+  <p><strong>Phone:</strong> +1 (212) 555-1234</p>
+  <p><strong>Address:</strong><br />Thrive Wisp Gardening<br />25 Union Square W,<br />New York, NY 10003, USA</p>
+  <p>We are committed to responding to all inquiries promptly and resolving any privacy concerns you may have.</p>
+
+  <h3>15. Consent</h3>
+  <p>By using our website or services, you signify your acceptance of this Privacy Policy and consent to the collection and use of your information as described. You acknowledge that you have read this policy, understand how your information is used, and agree that such use is appropriate.</p>
+  <p>If you do not agree with this policy, please do not use our services or provide us with personal information.</p>
+
+  <h3>16. Third-Party Websites and Services</h3>
+  <p>Our website may include links to third-party websites or services for your convenience and reference. We do not control these external sites and are not responsible for their privacy practices. We encourage you to read the privacy policies of any third-party services you interact with to understand how your information may be processed.</p>
+  <p>Using external links does not constitute endorsement by Thrive Wisp Gardening, and you access such services at your own risk.</p>
+
+  <h3>17. Security Incident Management</h3>
+  <p>In the event of a data breach or security incident affecting personal information under our control, we have established protocols to identify, contain, and mitigate the impact. We are committed to complying with all applicable legal notification requirements and will inform affected individuals promptly where there is a high risk of harm.</p>
+  <p>Our goal is to maintain the highest standards of privacy and security to preserve your trust and the integrity of our services.</p>
+
+  <h3>18. Your Privacy Choices and Settings</h3>
+  <p>You have several options to manage your privacy preferences:</p>
+  <ul>
+    <li>You may opt-out of marketing communications by following unsubscribe instructions included in our emails or contacting us directly.</li>
+    <li>You can manage cookie preferences through your browser settings or tools provided on our website.</li>
+    <li>You can access, correct, or delete your personal information by contacting our support team.</li>
+  </ul>
+  <p>We encourage you to exercise these rights to control your personal data and obtain any assistance you require.</p>
+
+  <h3>19. Data Protection Officer</h3>
+  <p>Our designated Data Protection Officer oversees compliance with privacy laws and this policy's implementation. They serve as your point of contact for all privacy-related matters and ensure that our organization maintains accountability and transparency.</p>
+  <p>You may reach out to the Data Protection Officer at privacy@thrivewisp.com for any questions concerning our data practices or privacy rights.</p>
+
+  <h3>20. Effective Date</h3>
+  <p>This Privacy Policy is effective as of June 2024 and supersedes any prior versions. It will remain in effect until replaced or amended by an updated policy published on this website.</p>
+  <p>Your adherence to this updated Privacy Policy reflects your continued trust in Thrive Wisp Gardening, and we are honored to safeguard your privacy as part of our dedication to delivering excellent gardening services.</p>
+</section>
+
+<footer>
+  <div class="copyright">&copy; 2024 Thrive Wisp Gardening Services. All rights reserved.</div>
+  <div class="contact-info">25 Union Square W, New York, NY 10003, USA | Phone: +1 (212) 555-1234</div>
+</footer>
+
+<script>
+  const nav = document.querySelector('nav');
+  const toggleBtn = document.querySelector('.mobile-nav-toggle');
+  toggleBtn.addEventListener('click', () => {
+    const expanded = toggleBtn.getAttribute('aria-expanded') === 'true' || false;
+    toggleBtn.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('open');
+  });
+
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if(nav.classList.contains('open')){
+        nav.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', false);
+      }
+    });
+  });
+</script>
+</body>
+</html>
+
