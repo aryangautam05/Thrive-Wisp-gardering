@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms and Conditions - Thrive Wisp Gardening Services</title>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f9faf7;
+      color: #374151;
+      line-height: 1.8;
+      font-size: 18px;
+    }
+    a {
+      color: #166534;
+      text-decoration: none;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(22, 101, 52, 0.1);
+    }
+    /* Container max width */
+    .container {
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 24px 48px;
+    }
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: #e7f5e6;
+      border-bottom: 1px solid #d1d5db;
+      z-index: 1000;
+    }
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 24px;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 28px;
+      color: #166534;
+      letter-spacing: 0.06em;
+      user-select: none;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 14px;
+      padding: 6px 12px;
+      border-radius: 10px;
+      transition: background-color 0.25s ease;
+      color: #166534;
+    }
+    nav a:hover,
+    nav a:focus {
+      background-color: #a7f3d0;
+      color: #14532d;
+      outline-offset: 3px;
+    }
+    .mobile-nav-toggle {
+      display: none;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #166534;
+      font-size: 32px;
+    }
+    /* Hero section */
+    .hero-terms {
+      text-align: center;
+      background: linear-gradient(135deg, #a7f3d0, #22c55e);
+      color: #14532d;
+      padding: 96px 24px 72px;
+      border-radius: 0 0 40px 40px;
+      box-shadow: inset 0 0 50px 15px rgba(22, 101, 52, 0.15);
+    }
+    .hero-terms h1 {
+      max-width: 800px;
+      margin: 0 auto 24px;
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      text-shadow: 1px 1px 2px #166534;
+    }
+    .hero-terms p {
+      max-width: 800px;
+      margin: 0 auto 36px;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #14532ddd;
+      line-height: 1.5;
+    }
+    /* Content large */
+    section.content-large {
+      max-width: 900px;
+      margin: 64px auto;
+      color: #374151;
+      padding: 0 16px 96px;
+    }
+    section.content-large h2, section.content-large h3 {
+      font-weight: 700;
+      color: #166534;
+      margin-top: 56px;
+      margin-bottom: 24px;
+    }
+    section.content-large h2 {
+      font-size: 2.8rem;
+    }
+    section.content-large h3 {
+      font-size: 2.2rem;
+    }
+    section.content-large p {
+      margin-bottom: 32px;
+      font-size: 1.1rem;
+      line-height: 1.9;
+    }
+    /* Footer */
+    footer {
+      background: #166534;
+      color: #d1fae5;
+      text-align: center;
+      padding: 24px 32px;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+    footer .copyright {
+      flex: 1 100%;
+      margin-bottom: 8px;
+    }
+    footer .contact-info {
+      flex: 1 100%;
+      font-size: 1.1rem;
+    }
+    /* Responsive */
+    @media (max-width: 767px) {
+      .hero-terms h1 {
+        font-size: 2.8rem;
+      }
+      section.content-large h2 {
+        font-size: 2.2rem;
+      }
+      section.content-large h3 {
+        font-size: 1.8rem;
+      }
+      footer {
+        padding: 24px 16px;
+      }
+    }
+    /* Hamburger menu for mobile */
+    @media (max-width: 767px) {
+      nav {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 64px);
+        background: #e7f5e6;
+        flex-direction: column;
+        padding: 32px 0;
+        gap: 24px;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        box-shadow: 2px 0 8px rgba(22, 101, 52, 0.15);
+        z-index: 999;
+      }
+      nav.open {
+        transform: translateX(0);
+      }
+      nav a {
+        font-size: 1.6rem;
+        padding: 12px 24px;
+      }
+      .mobile-nav-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="logo" tabindex="0" aria-label="Thrive Wisp Gardening logo">Thrive Wisp Gardening</div>
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation"> 
+      <span class="material-icons">menu</span>
+    </button>
+    <nav id="primary-navigation" role="navigation" aria-label="Primary navigation">
+    <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-terms" role="banner">
+  <h1>Terms and Conditions</h1>
+  <p>Welcome to Thrive Wisp Gardening Services. Please read these Terms and Conditions carefully before using our services, website, or any associated platforms. By accessing or using our services, you agree to comply with and be bound by these Terms, and all applicable laws and regulations. If you do not agree with any part of these terms, please refrain from using our services.</p>
+</section>
+
+<section class="content-large" role="main" aria-labelledby="terms-heading">
+  <h2 id="terms-heading">Comprehensive Terms and Conditions for Thrive Wisp Gardening Services</h2>
+
+  <h3>1. Agreement to Terms</h3>
+  <p>These Terms and Conditions constitute a legally binding agreement between you, the client or user ("you," "your"), and Thrive Wisp Gardening Services ("we," "us," or "our"). By engaging our services or accessing our website in any capacity, you confirm and acknowledge that you have read, understood, and agreed to be bound by all provisions contained herein. We reserve the right to modify or update these Terms at any time, and your continued use of our services after modifications constitutes acceptance of the revised terms.</p>
+  <p>It is your responsibility to review these Terms periodically for changes. Should you have any questions or require clarification, please reach out to our support team prior to using our services.</p>
+  
+  <h3>2. Scope of Services</h3>
+  <p>Thrive Wisp Gardening offers professional gardening, landscaping, and outdoor maintenance services designed to meet the unique needs of residential and commercial clients. Our services include but are not limited to lawn care, garden design, pest control, seasonal cleanup, tree and shrub maintenance, and consultation on sustainable gardening practices.</p>
+  <p>All services are subject to availability, and any specific project will be detailed in a separate service contract or agreement outlining scope, pricing, schedules, and deliverables. We endeavor to perform all services diligently and to the highest professional standards; however, outcomes involving living plants will inherently involve natural variances beyond our control.</p>
+  
+  <h3>3. Client Obligations and Responsibilities</h3>
+  <p>As a client, you agree to provide accurate and complete information necessary for the provision of our services, including property location, access details, and any relevant conditions that may affect work (such as underground utilities, pets, or safety hazards). You ensure compliance with local laws and permit requirements regarding landscaping or other outdoor alterations.</p>
+  <p>You are responsible for maintaining safe access for our personnel to perform services and agree to promptly communicate any changes or issues that could impact our work. Payment obligations as defined within your service agreement must be fulfilled timely, and you acknowledge that delays or failure to pay might impact the continuation or completion of services.</p>
+  
+  <h3>4. Quotes, Payment, and Pricing</h3>
+  <p>All pricing provided by Thrive Wisp Gardening will be outlined in written quotations or service contracts. Prices quoted are valid for 30 days unless otherwise specified and are subject to change after that period. Prices are inclusive of labor, materials, and equipment necessary to complete services, except as otherwise stated.</p>
+  <p>Payment terms will be defined in your agreement, typically requiring deposits, milestone payments, or final payment upon completion. Payment methods accepted include credit cards, bank transfers, and other methods as mutually agreed. Late payments may incur additional fees or interest charges according to applicable laws. No services will commence or continue without agreed payment arrangements.</p>
+  
+  <h3>5. Service Modifications, Cancellations, and Termination</h3>
+  <p>You may request modifications or cancellations of services, subject to our approval and adherence to agreed notice periods. Changes may affect pricing, scheduling, or project scope and will be documented via amendments to the original agreement. We reserve the right to terminate services for non-compliance with terms, unsafe conditions, or non-payment.</p>
+  <p>Refund policies vary depending on service nature and work performed, and will be explained in your service contract. In cases of termination initiated by either party, final settlements and any outstanding obligations must be resolved promptly.</p>
+  
+  <h3>6. Intellectual Property</h3>
+  <p>All intellectual property rights, including trademarks, logos, designs, text, and images on our website and printed materials, remain the property of Thrive Wisp Gardening Services or respective third parties. Unauthorized use or reproduction of such materials is strictly prohibited without prior written consent.</p>
+  <p>Creative garden designs, plans, or proprietary methodologies developed as part of our services remain our intellectual property unless otherwise agreed in writing.</p>
+  
+  <h3>7. User Content and Feedback</h3>
+  <p>Any content you provide to us, including inquiries, feedback, images, or other communications, is granted to Thrive Wisp Gardening a royalty-free, worldwide license to use, reproduce, modify, and distribute for purposes related to service improvement and marketing, always respecting your privacy.</p>
+  <p>You agree not to submit unlawful, harmful, defamatory, or otherwise inappropriate content and acknowledge we reserve the right to remove such content without notice.</p>
+  
+  <h3>8. Disclaimer of Warranties</h3>
+  <p>Thrive Wisp Gardening provides services on an “as is” and “as available” basis. While we strive for excellence, we make no warranties or guarantees, expressed or implied, regarding the outcomes of any gardening activities, including but not limited to plant growth, pest control effectiveness, or landscape aesthetics. Your use of our services is at your sole risk.</p>
+  
+  <h3>9. Limitation of Liability</h3>
+  <p>To the fullest extent permitted by law, Thrive Wisp Gardening shall not be liable for any indirect, incidental, consequential, or punitive damages arising out of or related to service use or inability to use services. Our total liability, regardless of cause, shall not exceed the amount you have paid for the particular services giving rise to the claim.</p>
+  <p>You acknowledge that living gardens are subject to natural conditions beyond our control, and we disclaim liability for unforeseeable environmental impacts.</p>
+  
+  <h3>10. Privacy and Data Protection</h3>
+  <p>Your privacy is important to us, and our Privacy Policy, accessible on our website, outlines how we collect, use, and protect your personal information. By using our services, you consent to the collection and processing of your data as described in the Privacy Policy.</p>
+  
+  <h3>11. Governing Law and Jurisdiction</h3>
+  <p>These Terms and Conditions are governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of laws principles. Any disputes arising from or relating to these Terms shall be subject to the exclusive jurisdiction of the courts located in New York County, New York.</p>
+  
+  <h3>12. Force Majeure</h3>
+  <p>Thrive Wisp Gardening shall not be liable for failure or delay in performing services due to causes beyond our reasonable control, including but not limited to natural disasters, pandemics, government restrictions, labor disputes, or circumstances preventing safe work. In such events, we will notify you promptly and work diligently to resume services as soon as possible.</p>
+  
+  <h3>13. Indemnification</h3>
+  <p>You agree to indemnify, defend, and hold harmless Thrive Wisp Gardening, its affiliates, employees, agents, and contractors from any claims, damages, liabilities, and expenses arising out of your breach of these Terms or misuse of services.</p>
+  
+  <h3>14. Severability</h3>
+  <p>If any provision of these Terms is found invalid or unenforceable by a court, such provision shall be severed, and the remainder of the Terms will remain in full force and effect.</p>
+  
+  <h3>15. Entire Agreement</h3>
+  <p>These Terms, together with our Privacy Policy and any applicable service contracts, constitute the entire agreement between you and Thrive Wisp Gardening, superseding all prior negotiations and understandings.</p>
+  
+  <h3>16. Contact Information</h3>
+  <p>If you have questions, concerns, or need further information regarding these Terms, please contact us at:</p>
+  <p><strong>Email:</strong> support@thrivewisp.com</p>
+  <p><strong>Phone:</strong> +1 (212) 555-1234</p>
+  <p><strong>Address:</strong><br />Thrive Wisp Gardening<br />25 Union Square W,<br />New York, NY 10003, USA</p>
+
+  <h3>17. Changes to Terms and Conditions</h3>
+  <p>We reserve the right to amend or update these Terms and Conditions at any time without prior notice. Changes will be posted on this page with the updated effective date. By continuing to use our services following such changes, you agree to the revised Terms. We encourage you to review this page regularly to stay informed.</p>
+
+  <h3>18. User Responsibilities and Conduct</h3>
+  <p>By utilizing our website and services, you agree to act responsibly and lawfully. Prohibited actions include unauthorized use of content, fraudulent behavior, harming or attempting to harm the site or its users, and any misconduct that disrupts normal service operation.</p>
+
+  <h3>19. Intellectual Property Rights</h3>
+  <p>All content on this site including images, logos, text, graphics, and software is owned by or licensed to Thrive Wisp Gardening. No content may be copied, reproduced, or used without explicit prior written consent from us.</p>
+
+  <h3>20. Limitation on Use</h3>
+  <p>You agree to use the website and services solely for lawful purposes and in compliance with these Terms. Commercial use or data scraping without permission is prohibited.</p>
+
+  <h3>21. Disclaimer of Endorsements</h3>
+  <p>Links or references to third-party products, services, or websites do not constitute endorsements or warranties. Use these at your discretion and risk.</p>
+
+  <h3>22. Electronic Communications</h3>
+  <p>By using our services, you consent to receiving electronic communications from us, including notices, agreements, and disclosures, which satisfy any legal requirement that such communications be in writing.</p>
+
+  <h3>23. No Waiver</h3>
+  <p>Failure to enforce any provision of these Terms shall not be considered a waiver of our right to enforce it at a later time.</p>
+
+  <h3>24. Headings</h3>
+  <p>Headings used in these Terms are for convenience only and have no legal or contractual effect.</p>
+
+  <h3>25. Language</h3>
+  <p>These Terms are presented in English, which shall be the controlling language for all purposes related to interpretation and enforcement.</p>
+
+  <h3>26. Miscellaneous</h3>
+  <p>Any notices required or permitted shall be in writing and delivered to the appropriate contact address provided. If any term conflicts with applicable law, that term shall be modified or waived to the minimum extent necessary.</p>
+
+  <h3>Closing Remarks</h3>
+  <p>Thank you for choosing Thrive Wisp Gardening Services. We value your trust and strive to provide transparent, fair, and professional service under these Terms and Conditions. Should you wish to discuss any aspect of these Terms or your service experience, please contact our customer care team directly.</p>
+</section>
+
+<footer>
+  <div class="copyright">&copy; 2024 Thrive Wisp Gardening Services. All rights reserved.</div>
+  <div class="contact-info">25 Union Square W, New York, NY 10003, USA | Phone: +1 (212) 555-1234</div>
+</footer>
+
+<script>
+  const nav = document.querySelector('nav');
+  const toggleBtn = document.querySelector('.mobile-nav-toggle');
+  toggleBtn.addEventListener('click', () => {
+    const expanded = toggleBtn.getAttribute('aria-expanded') === 'true' || false;
+    toggleBtn.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('open');
+  });
+
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if(nav.classList.contains('open')){
+        nav.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', false);
+      }
+    });
+  });
+</script>
+</body>
+</html>
+
