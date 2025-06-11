@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - Thrive Wisp Gardening Services</title>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f9faf7;
+      color: #374151;
+      line-height: 1.8;
+      font-size: 18px;
+      padding-bottom: 48px;
+    }
+    a {
+      color: #166534;
+      text-decoration: none;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+    /* Container max width */
+    .container {
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 24px 48px;
+    }
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: #e7f5e6;
+      border-bottom: 1px solid #d1d5db;
+      z-index: 1000;
+    }
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 24px;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 28px;
+      color: #166534;
+      letter-spacing: 0.06em;
+      user-select: none;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 14px;
+      padding: 6px 12px;
+      border-radius: 10px;
+      transition: background-color 0.25s ease;
+      color: #166534;
+    }
+    nav a:hover,
+    nav a:focus {
+      background-color: #a7f3d0;
+      color: #14532d;
+      outline-offset: 3px;
+    }
+    .mobile-nav-toggle {
+      display: none;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #166534;
+      font-size: 32px;
+    }
+    /* Hero Section */
+    .hero-contact {
+      text-align: center;
+      background: linear-gradient(135deg, #a7f3d0, #22c55e);
+      color: #14532d;
+      padding: 96px 24px 72px;
+      border-radius: 0 0 40px 40px;
+      box-shadow: inset 0 0 50px 15px rgba(22, 101, 52, 0.15);
+    }
+    .hero-contact h1 {
+      max-width: 800px;
+      margin: 0 auto 24px;
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      text-shadow: 1px 1px 2px #166534;
+    }
+    .hero-contact p {
+      max-width: 700px;
+      margin: 0 auto 36px;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #14532ddd;
+      line-height: 1.5;
+    }
+    /* Content Large */
+    section.content-large {
+      max-width: 900px;
+      margin: 64px auto;
+      color: #374151;
+      padding: 0 16px 96px;
+    }
+    section.content-large h2, section.content-large h3 {
+      font-weight: 700;
+      color: #166534;
+      margin-top: 56px;
+      margin-bottom: 24px;
+    }
+    section.content-large h2 {
+      font-size: 2.8rem;
+    }
+    section.content-large h3 {
+      font-size: 2.2rem;
+    }
+    section.content-large p, 
+    section.content-large address {
+      margin-bottom: 32px;
+      font-size: 1.1rem;
+      line-height: 1.9;
+    }
+    address {
+      font-style: normal;
+      color: #374151;
+      white-space: pre-line;
+    }
+    /* Contact Form */
+    form.contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    label {
+      font-weight: 600;
+      color: #14532d;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 12px 16px;
+      border: 1px solid #a7f3d0;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      resize: vertical;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #22c55e;
+      box-shadow: 0 0 5px #22c55e99;
+    }
+    textarea {
+      min-height: 150px;
+      max-height: 300px;
+    }
+    button.submit-btn {
+      background: #166534;
+      color: #e7f5e6;
+      border: none;
+      padding: 14px 48px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      border-radius: 24px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      align-self: flex-start;
+      box-shadow: 0 8px 20px rgba(22, 101, 52, 0.35);
+      margin-top: 12px;
+    }
+    button.submit-btn:hover,
+    button.submit-btn:focus {
+      background: #22c55e;
+      outline-offset: 4px;
+      outline: 3px solid #166534;
+    }
+    /* Footer */
+    footer {
+      background: #166534;
+      color: #d1fae5;
+      text-align: center;
+      padding: 24px 32px;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+    footer .copyright {
+      flex: 1 100%;
+      margin-bottom: 8px;
+    }
+    footer .contact-info {
+      flex: 1 100%;
+      font-size: 1.1rem;
+    }
+    /* Responsive */
+    @media (max-width: 767px) {
+      .hero-contact h1 {
+        font-size: 2.8rem;
+      }
+      section.content-large h2 {
+        font-size: 2.2rem;
+      }
+      section.content-large h3 {
+        font-size: 1.8rem;
+      }
+      footer {
+        padding: 24px 16px;
+      }
+    }
+    /* Hamburger menu for mobile */
+    @media (max-width: 767px) {
+      nav {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 64px);
+        background: #e7f5e6;
+        flex-direction: column;
+        padding: 32px 0;
+        gap: 24px;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        box-shadow: 2px 0 8px rgba(22, 101, 52, 0.15);
+        z-index: 999;
+      }
+      nav.open {
+        transform: translateX(0);
+      }
+      nav a {
+        font-size: 1.6rem;
+        padding: 12px 24px;
+      }
+      .mobile-nav-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="logo" tabindex="0" aria-label="Thrive Wisp Gardening logo">Thrive Wisp Gardening</div>
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation"> 
+      <span class="material-icons">menu</span>
+    </button>
+    <nav id="primary-navigation" role="navigation" aria-label="Primary navigation">
+    <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0"aria-current="page">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-contact" role="banner">
+  <h1>Contact Us</h1>
+  <p>We are here to help and answer any questions you may have about our gardening services. Reach out to us through any of the available means below, and one of our dedicated team members will respond promptly and professionally. Your satisfaction and peace of mind are our top priorities.</p>
+</section>
+
+<section class="content-large" role="main" aria-labelledby="contact-us-heading">
+  <h2 id="contact-us-heading">How to Reach Thrive Wisp Gardening Services</h2>
+  <p>Effective communication is the backbone of excellent service delivery. We invite you to use the contact information and form provided here to start a conversation about your garden, request consultations, schedule services, or provide feedback. Each inquiry receives careful attention tailored to your unique needs and preferences. We aim to create seamless, transparent, and timely engagements to ensure you feel valued and confident in choosing Thrive Wisp Gardening as your trusted partner in cultivating extraordinary outdoor spaces.</p>
+
+  <h3>Phone and Email Contact</h3>
+  <p>Our phone lines and email inboxes are monitored diligently during business hours to provide fast and accurate responses to your questions, service requests, or concerns. Whether you have a quick question or you need detailed advice, our knowledgeable gardeners and customer service team are prepared to assist you courteously and thoroughly. Please take note that during peak periods or holidays, our response times might be slightly extended, but we endeavor to reply within 24 hours on business days.</p>
+  <address>
+    Phone: +1 (212) 555-1234<br />
+    Email: contact@thrivewisp.com
+  </address>
+
+  <h3>Online Contact Form</h3>
+  <p>Below is a convenient form for submitting detailed requests or inquiries. Please fill out all required fields accurately to help us provide you with the best possible service. Include specific information about your gardening interests, timelines, and any questions or instructions you may have. Our team carefully reviews all submissions and will contact you to discuss next steps, pricing, or schedule appointments as applicable.</p>
+  <form class="contact-form" action="#" method="post" aria-label="Contact form">
+    <label for="name">Full Name *</label>
+    <input type="text" id="name" name="name" required aria-required="true" placeholder="Your full name" />
+
+    <label for="email">Email Address *</label>
+    <input type="email" id="email" name="email" required aria-required="true" placeholder="you@example.com" />
+
+    <label for="phone">Phone Number</label>
+    <input type="text" id="phone" name="phone" placeholder="+1 212 555 1234" />
+
+    <label for="message">Your Message *</label>
+    <textarea id="message" name="message" required aria-required="true" placeholder="Please describe your gardening needs or questions" rows="6"></textarea>
+
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+
+  <h3>Our Physical Location</h3>
+  <p>We are proud to serve the thriving urban community with our centrally located office and gardening supply hub. Clients can visit us for consultations, pick up materials, or discuss landscaping projects in person. Our location is easily accessible by public transportation as well as private vehicles, with parking nearby.</p>
+  <address>
+    25 Union Square W,<br />
+    New York, NY 10003, USA
+  </address>
+
+  <h3>Extended Information About Contact and Support</h3>
+  <p>The importance of accessible, transparent communication with our clients cannot be overstated. We have established multiple channels to ensure you can reach us in the manner most convenient to you. Our customer support team is trained extensively in both gardening knowledge and communication skills, ensuring you receive thorough guidance and respectful assistance regardless of your inquiry’s complexity.</p>
+  <p>Whether you prefer the quick interaction of a phone call, the convenience of email, or the flexibility of an online form, Thrive Wisp Gardening guarantees a commitment to your satisfaction and timely resolution of your needs. No question is too small, no request too complex; feel confident that your garden concerns are met with expertise and care.</p>
+    
+  <h3>Common Inquiries and How We Support You</h3>
+  <p>Many clients contact us seeking inspiration for their garden designs, assistance with pest management, or advice on sustainable practices. Our team responds with personalized recommendations based on your unique property characteristics, climate considerations, and personal preferences.</p>
+  <p>Additionally, we provide support for maintenance scheduling, seasonal preparations, and emergency interventions due to weather or pest outbreaks. Our role is to be a trusted partner through every stage of your garden’s life cycle.</p>
+  
+  <h3>Privacy and Data Protection in Contacting Us</h3>
+  <p>Your privacy remains paramount when interacting with Thrive Wisp Gardening. Personal information collected via our contact channels is handled in strict accordance with our Privacy Policy. We protect your data using robust security measures and use it solely for the purposes of responding to your inquiry or providing requested services.</p>
+    
+  <h3>Emergency and After-Hours Support</h3>
+  <p>Though our primary business hours cover weekdays, we understand that urgent garden issues can arise at any time. If you experience a critical situation such as storm damage or sudden pest infestation, please leave a detailed message including your contact details, and our on-call team member will respond as quickly as possible. We aim to provide peace of mind with prompt attention to urgent needs, minimizing disruption to your outdoor environment.</p>
+
+  <h3>Feedback and Continuous Improvement</h3>
+  <p>Your feedback helps us grow and improve our services continually. After interactions or completed projects, we encourage you to share your experiences, suggestions, or concerns. Thrive Wisp Gardening values honest communication and strives to incorporate client feedback into our training, processes, and offerings, ensuring we meet and exceed your expectations consistently.</p>
+
+  <h3>Community Engagement and Outreach</h3>
+  <p>We are deeply committed to engaging with our local community through workshops, gardening clubs, and educational outreach. Contact us to learn more about upcoming events, volunteering opportunities, or partnerships that foster sustainable and beautiful green spaces.</p>
+
+  <h3>Extended Contact Methods Coming Soon</h3>
+  <p>We are continuously enhancing our communication options, with plans to introduce live chat support, video consultations, and mobile app messaging features. Stay tuned to our website or subscribe to our newsletter for announcements regarding new and improved ways to connect with us.</p>
+
+  <h3>Thank You for Considering Thrive Wisp Gardening</h3>
+  <p>Your garden is a living extension of your home and lifestyle. Contacting Thrive Wisp Gardening is the first step toward a collaborative journey to achieve your vision of outdoor beauty and sustainability. We look forward to hearing from you and helping your garden thrive with expert care, creativity, and personalized service dedicated to you.</p>
+</section>
+
+<footer>
+  <div class="copyright">&copy; 2024 Thrive Wisp Gardening Services. All rights reserved.</div>
+  <div class="contact-info">25 Union Square W, New York, NY 10003, USA | Phone: +1 (212) 555-1234</div>
+</footer>
+
+<script>
+  const nav = document.querySelector('nav');
+  const toggleBtn = document.querySelector('.mobile-nav-toggle');
+  toggleBtn.addEventListener('click', () => {
+    const expanded = toggleBtn.getAttribute('aria-expanded') === 'true' || false;
+    toggleBtn.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('open');
+  });
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if(nav.classList.contains('open')){
+        nav.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', false);
+      }
+    });
+  });
+</script>
+</body>
+</html>
+
+
