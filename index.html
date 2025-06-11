@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thrive Wisp Gardening Services</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background: #f9faf7;
+    color: #374151;
+    line-height: 1.6;
+    font-size: 18px;
+  }
+  a {
+    color: #166534;
+    text-decoration: none;
+  }
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(22, 101, 52, 0.1);
+  }
+  /* Container max width */
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 24px;
+  }
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background: #e7f5e6;
+    border-bottom: 1px solid #d1d5db;
+    z-index: 1000;
+  }
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 24px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 28px;
+    color: #166534;
+    letter-spacing: 0.06em;
+    user-select: none;
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    transition: background-color 0.25s ease;
+    color: #166534;
+  }
+  nav a:hover,
+  nav a:focus {
+    background-color: #a7f3d0;
+    color: #14532d;
+    outline-offset: 3px;
+  }
+  /* Mobile nav */
+  .mobile-nav-toggle {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #166534;
+    font-size: 32px;
+  }
+  /* Hero section */
+  .hero {
+    text-align: center;
+    background: linear-gradient(135deg, #a7f3d0, #22c55e);
+    color: #14532d;
+    padding: 96px 24px 72px;
+    border-radius: 0 0 40px 40px;
+    box-shadow: inset 0 0 50px 15px rgba(22, 101, 52, 0.15);
+  }
+  .hero h1 {
+    max-width: 800px;
+    margin: 0 auto 24px;
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-shadow: 1px 1px 2px #166534;
+  }
+  .hero p {
+    max-width: 600px;
+    margin: 0 auto 36px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #14532ddd;
+  }
+  .btn-primary {
+    background: #166534;
+    color: #e7f5e6;
+    border: none;
+    padding: 14px 48px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 8px 20px rgba(22, 101, 52, 0.35);
+  }
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background: #22c55e;
+    outline-offset: 4px;
+    outline: 3px solid #166534;
+  }
+  /* Services section */
+  section.services {
+    padding: 64px 0;
+  }
+  section.services h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #166534;
+    margin-bottom: 48px;
+    text-align: center;
+  }
+  .services-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  .service-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(22, 101, 52, 0.06);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .service-card:hover,
+  .service-card:focus-within {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(22, 101, 52, 0.15);
+  }
+  .service-img {
+    border-radius: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 16px rgba(22,101,52,0.12);
+    height: 180px;
+    object-fit: cover;
+  }
+  .service-icon {
+    font-size: 48px;
+    color: #22c55e;
+    margin-bottom: 12px;
+    align-self: flex-start;
+  }
+  .service-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #14532d;
+  }
+  .service-desc {
+    flex-grow: 1;
+    color: #4b5563;
+    margin-bottom: 16px;
+  }
+  .service-price {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #166534;
+  }
+  /* Content article large */
+  section.content-large {
+    max-width: 900px;
+    margin: 64px auto;
+    line-height: 1.8;
+    color: #374151;
+    padding: 0 16px;
+  }
+  section.content-large h3 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #166534;
+    margin-top: 48px;
+    margin-bottom: 18px;
+  }
+  section.content-large p {
+    margin-bottom: 24px;
+  }
+  /* Gallery section */
+  section.gallery {
+    padding: 72px 0;
+    background: #def7ec;
+    border-radius: 20px;
+  }
+  section.gallery h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #166534;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .gallery-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 24px;
+  }
+  /* Customer satisfaction */
+  section.customer-satisfaction {
+    background: #f0fdf4;
+    border-radius: 20px;
+    padding: 48px 24px;
+    max-width: 960px;
+    margin: 72px auto 0 auto;
+    text-align: center;
+  }
+  section.customer-satisfaction h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #166534;
+    margin-bottom: 24px;
+  }
+  .testimonial {
+    font-style: italic;
+    color: #4b5563;
+    margin-bottom: 16px;
+  }
+  .testimonial-author {
+    font-weight: 600;
+    color: #14532d;
+    font-size: 1rem;
+  }
+  /* Disclaimer */
+  section.disclaimer {
+    max-width: 900px;
+    margin: 64px auto;
+    color: #6b7280;
+    font-size: 0.95rem;
+    padding: 0 16px;
+    border-top: 1px solid #d1d5db;
+    padding-top: 24px;
+    font-style: italic;
+  }
+  /* Footer */
+  footer {
+    background: #166534;
+    color: #d1fae5;
+    text-align: center;
+    padding: 24px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  /* Responsive */
+  @media (max-width: 767px) {
+    .hero h1 {
+      font-size: 2.4rem;
+    }
+    section.services {
+      padding: 48px 16px;
+    }
+    section.services h2 {
+      margin-bottom: 32px;
+      font-size: 2.4rem;
+    }
+    .service-img {
+      height: 140px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .hero h1 {
+      font-size: 2.8rem;
+    }
+  }
+  /* Hamburger menu for mobile */
+  @media (max-width: 767px) {
+    nav {
+      position: fixed;
+      top: 64px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 64px);
+      background: #e7f5e6;
+      flex-direction: column;
+      padding: 32px 0;
+      gap: 24px;
+      overflow-y: auto;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      box-shadow: 2px 0 8px rgba(22, 101, 52, 0.15);
+      z-index: 999;
+    }
+    nav.open {
+      transform: translateX(0);
+    }
+    nav a {
+      font-size: 1.6rem;
+      padding: 12px 24px;
+    }
+    .mobile-nav-toggle {
+      display: block;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="logo" tabindex="0" aria-label="Thrive Wisp Gardening logo">Thrive Wisp Gardening</div>
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-navigation"> 
+      <span class="material-icons">menu</span>
+    </button>
+    <nav id="primary-navigation" role="navigation" aria-label="Primary navigation">
+      <a href="index.html" tabindex="0"aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home" role="banner">
+    <h1>Thrive Wisp Gardening — Cultivate Your Dream Garden</h1>
+    <p>Your trusted partner for expert gardening services, sustainable landscaping, and garden care tailored to your unique outdoor sanctuary.</p>
+    <button class="btn-primary" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'});">Explore Our Services</button>
+  </section>
+
+  <section class="services container" id="services" aria-labelledby="services-heading">
+    <h2 id="services-heading">Our Expert Gardening Services & Pricing</h2>
+    <div class="services-grid">
+      <article class="service-card" tabindex="0" aria-label="Lawn Care service">
+        <img src="s1.jpg" alt="Well-manicured green lawn with crisp edges and fresh grass" class="service-img" />
+        <span class="material-icons service-icon" aria-hidden="true">grass</span>
+        <h3 class="service-title">Lawn Care & Maintenance</h3>
+        <p class="service-desc">We provide comprehensive lawn care including precision mowing, fertilization tailored to your grass type, and expert aeration to encourage oxygen flow to roots. Our weed and pest control programs keep your lawn lush, vibrant, and free of invasive species all year round. We also offer seasonal lawn treatments to prepare for harsh weather and ensure resilience. Our dedicated care restores and maintains healthy grass, creating a luxurious green carpet for your home.</p>
+        <p class="service-price" aria-label="Price">$99 / per visit</p>
+      </article>
+      <article class="service-card" tabindex="0" aria-label="Garden Design service">
+        <img src="s2.jpg" alt="Artistic garden design plan with vibrant flower beds and pathways" class="service-img" />
+        <span class="material-icons service-icon" aria-hidden="true">nature</span>
+        <h3 class="service-title">Garden Design & Installation</h3>
+        <p class="service-desc">Our skilled garden designers collaborate closely with you to craft innovative, sustainable garden plans. From initial concepts through plant selection, landscape features, and full installation, we transform outdoor areas into striking, serene environments. We specialize in creating harmonious layouts that integrate water features, lighting, and native plantings promoting biodiversity and easy maintenance. Our expert installation guarantees healthy growth and long-lasting beauty for your bespoke garden sanctuary.</p>
+        <p class="service-price" aria-label="Price">$1,200 - $5,000 / project</p>
+      </article>
+      <article class="service-card" tabindex="0" aria-label="Organic Pest Control service">
+        <img src="s3.jpg" alt="Spraying organic pest control solution on leafy plants" class="service-img" />
+        <span class="material-icons service-icon" aria-hidden="true">bug_report</span>
+        <h3 class="service-title">Organic Pest Control</h3>
+        <p class="service-desc">We provide environmentally responsible pest management using organic and biodegradable treatments tailored specifically to your garden's ecosystem. Our specialists identify pest pressures early, applying treatments that target detrimental species while preserving beneficial insects and wildlife. Regular monitoring, companion planting advice, and integrated pest management practices reduce pest impact sustainably. Our approach prevents pest resistance and safeguards your garden’s long-term ecological health.</p>
+        <p class="service-price" aria-label="Price">$150 / per treatment</p>
+      </article>
+      <article class="service-card" tabindex="0" aria-label="Seasonal Cleanup service">
+        <img src="s4.jpg" alt="Garden with cleaned flower beds and spread mulch ready for next season" class="service-img" />
+        <span class="material-icons service-icon" aria-hidden="true">autumn</span>
+        <h3 class="service-title">Seasonal Cleanup & Mulching</h3>
+        <p class="service-desc">Our seasonal services prepare your garden to thrive through changing weather. We expertly clear fallen leaves, dead foliage, and debris, enabling healthy new growth. Mulching with natural organic materials conserves moisture, suppresses weeds, and enriches soil structure. We tailor cleanup schedules for spring and fall, enhancing soil fertility and plant resilience. Regular soil conditioning and garden maintenance minimize pests and diseases, delivering a pristine landscape ready for every season.</p>
+        <p class="service-price" aria-label="Price">$250 / session</p>
+      </article>
+      <article class="service-card" tabindex="0" aria-label="Tree & Shrub Care service">
+        <img src="s5.jpg" alt="Gardener trimming healthy tree branches with professional tools" class="service-img" />
+        <span class="material-icons service-icon" aria-hidden="true">park</span>
+        <h3 class="service-title">Tree & Shrub Care</h3>
+        <p class="service-desc">Our arborists provide expert pruning, shaping, and health assessments to enhance your trees and shrubs’ natural beauty and longevity. We remove dead or diseased branches safely, encourage healthy growth, and protect against common pests and diseases. Our preventive care includes soil analysis and targeted fertilization to maintain vibrant foliage. With our attentive seasonal services, your landscape’s trees and shrubs will thrive beautifully, providing shade, privacy, and ecological benefits.</p>
+        <p class="service-price" aria-label="Price">$80 - $350 / treatment</p>
+      </article>
+    </div>
+  </section>
+
+    <section class="gallery" aria-label="Gallery of beautiful gardening images">
+    <h2>Our Garden Inspirations</h2>
+    <div class="gallery-grid" role="list">
+      <figure role="listitem">
+        <img src="g1.jpg" alt="Vibrant spring flower garden with tulips and daffodils blooming under sunlight" />
+      </figure>
+      <figure role="listitem">
+        <img src="g2.jpg" alt="Serene zen garden with raked gravel patterns, stones, and small shrubs" />
+      </figure>
+      <figure role="listitem">
+        <img src="g3.jpg" alt="Organized vegetable plot with tomatoes, lettuce, and carrots growing in rich soil" />
+      </figure>
+      <figure role="listitem">
+        <img src="g4.jpg" alt="Small garden pond surrounded by ferns and seasonal blooming plants with water lilies" />
+      </figure>
+      <figure role="listitem">
+        <img src="g5.jpg" alt="Curving garden path lined with colorful perennials and solar lanterns at twilight" />
+      </figure>
+      <figure role="listitem">
+        <img src="g6.jpg" alt="Well-maintained herb garden with rosemary, basil, thyme, and mint in raised beds" />
+      </figure>
+      <figure role="listitem">
+        <img src="g7.jpg" alt="Autumn garden with fallen leaves, pumpkins, and orange chrysanthemums" />
+      </figure>
+      <figure role="listitem">
+        <img src="g8.jpg" alt="Lush summer shrubs with hydrangea flowers in full bloom under blue sky" />
+      </figure>
+      <figure role="listitem">
+        <img src="g9.jpg" alt="Gardener pruning a flowering dogwood tree using professional tools" />
+      </figure>
+      <figure role="listitem">
+        <img src="g10.jpg" alt="Garden beds covered with organic wood chip mulch for moisture retention and weed control" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="content-large container" aria-label="Detailed gardening articles and tips">
+    <h3>Mastering Soil Preparation</h3>
+    <p>Healthy soil forms the bedrock of any successful garden. Achieving this involves comprehensive soil testing to determine nutrient content, pH balance, and organic matter levels. We advocate enriching the soil through natural compost, green manures, and organic amendments such as peat moss or worm castings to bolster fertility and microbial life. Aeration by core or spike methods relieves compaction and aids oxygen delivery to root systems, vital for plant respiration and nutrient absorption. Preparation also requires removing debris and weeds, creating a loose, friable medium for seeds and roots to establish themselves securely and thrive under optimal conditions.</p>
+    <p>It is critical to tailor soil treatments to soil texture and structure—clay soils demand loosening with sand and organic components to improve drainage, while sandy soils benefit from moisture-retentive amendments. Mulching not only moderates soil temperature but also prevents erosion and unmanaged weed growth, enhancing root protection. Consistently reassessing soil health ensures the garden evolves in harmony with changing plant and environmental demands, increasing diversity and productivity. Continual amendment over multiple seasons encourages beneficial microbial activity and fosters a balanced ecosystem critical to plant well-being.</p>
+    <p>Regular incorporation of cover crops builds humus levels and shields soil from nutrient loss, making these sustainable practices essential to ecological balance and long-term garden health. Through tailored strategies informed by soil testing and observed plant performance, gardeners can maximize fertility and reduce dependence on synthetic fertilizers or chemical inputs, resulting in more resilient, naturalistic gardens that flourish year after year.</p>
+    
+    <h3>Watering Techniques for Healthy Plants</h3>
+    <p>Efficient watering practices underpin plant vigor and sustainability. The targeted use of drip and soaker hoses optimizes water use by minimizing evaporation and runoff, delivering moisture directly to roots where it is required most. Deep, infrequent watering encourages roots to extend deeper into the soil profile, building drought resilience and structural strength in plants. Ideally, watering should occur early in the morning to maximize absorption and mitigate fungal issues caused by surface moisture. Overwatering can be just as damaging as under-watering, causing root rot, nutrient leaching, and fungal infections.</p>
+    <p>Awareness of specific plant water needs is crucial—desert succulents require sparing irrigation while tropical varieties depend on steady moisture. Soil amendments such as mulch and organic matter further conserve moisture, reducing watering frequency and supporting healthy soil microorganisms. Avoid overhead watering late in the evening to prevent prolonged leaf wetness and increase plant disease risk. Monitoring soil moisture with probes or tactile inspection guides watering schedules and improves plant health and water conservation.</p>
+    <p>Innovative techniques like rainwater harvesting and smart irrigation systems provide eco-friendly options, reducing resource consumption and ensuring eco-conscious garden management. By using timers, moisture sensors, and weather data integration, gardeners can automate watering to match climatic fluctuations precisely, preventing waste and encouraging sustainable, lush gardens year-round.</p>
+    
+    <h3>Choosing the Right Plants for Your Garden</h3>
+    <p>Selecting plants suited to local climatic and soil conditions is fundamental to creating a flourishing garden. Prioritizing native species leverages evolutionary adaptations that provide enhanced resilience, reduce maintenance, and support local fauna. Your garden will thrive as biodiversity increases, attracting pollinators and fostering natural pest control. Understanding your region’s hardy zones and microclimates allows appropriate plant selection, reducing water and fertilizer needs.</p>
+    <p>Plant choice diversity—varying bloom times, leaf textures, and growth habits—creates dynamic seasonal interest and structural balance. Companion planting principles should be embraced to reduce pests, enhance nutrient uptake, and promote growth synergy. Understanding the sun exposure of garden zones ensures plants are placed in conditions matching their light requirements: full sun, part shade, or full shade. Including a balance of evergreen, deciduous, and flowering species ensures ecological and aesthetic richness year-round.</p>
+    <p>Selecting drought-tolerant and pollinator-friendly plants not only conserves water but also sustains important ecosystem services. Prevention of invasive species introduction supports local balance and ensures native plants' success and sustainability. Gardeners should consider plant spacing for airflow to reduce disease risk and plan for mature size to avoid overcrowding and maintenance issues.</p>
+
+    <h3>Organic Pest & Disease Management</h3>
+    <p>Organic gardening fosters a vibrant ecosystem where beneficial organisms flourish, creating natural pest suppression. Early detection through consistent garden inspections enables rapid, targeted response to pest pressures. We endorse the use of biological controls like lady beetles, nematodes, and lacewings, which effectively reduce pest populations without harming plants or beneficial insects. Proper garden hygiene through debris removal and pruning limits pest habitat and disrupts pest life cycles.</p>
+    <p>Natural pest deterrents such as insecticidal soaps, neem oil, and horticultural oils provide effective control measures while adhering to strict organic standards. Supporting plant health through proper nutrition and watering boosts resilience and disease resistance. Cultural practices, including crop rotation, sanitation of tools, and removal of infested plant material, significantly reduce the spread and impact of diseases. Using resistant varieties and encouraging diversity are key parts of a robust pest management strategy.</p>
+    <p>A holistic integrated pest management approach sustains the delicate balance between plants and organisms, ensuring safe, productive gardens that are free of harmful chemicals. By combining monitoring, prevention, and targeted interventions, gardeners minimize environmental impact while safeguarding plant health and productivity throughout the growing season.</p>
+
+    <h3>Seasonal Garden Care & Preparation</h3>
+    <p>Seasonal awareness is vital to maintaining garden vitality throughout the year. Spring heralds a season of renewal; gardening tasks include pruning winter damage, soil rejuvenation, early-season planting, and installation of supports for climbing plants. Planting spring bulbs and fertilizing established beds promotes luxuriant bloom and foliage growth. Spring also involves monitoring for pests emerging with warming weather and implementing control where necessary.</p>
+    <p>Summer demands close attention to watering, mulching, deadheading, and pest monitoring, preventing stress during peak heat periods. Fall routines encompass clearing leaf litter, preparing soil with winter cover crops, laying down mulch to protect roots, and planting hardy bulbs for spring blooms. Winter is a season for planning, tool maintenance, and protection of vulnerable plantings through covers and relocation indoors. Weatherproofing garden infrastructure and pruning dormant trees optimizes plant health and reduces damage from snow or frost.</p>
+    <p>Adapting tasks to your region’s specific climate and microclimates, and using frost warning systems, ensures timely interventions that improve plant survival and garden performance. Engaging in soil testing, compost preparation, and seed ordering during the off-season provides a head start to the following year’s growing cycle, enhancing garden continuity and productivity over time.</p>
+
+    <h3>Designing Your Garden Oasis</h3>
+    <p>Creating your garden oasis combines artistry with ecological insight. Incorporate focal features like water fountains, sculptures, and specimen plants to anchor visual interest. Pathways designed with natural stone or sustainable materials create inviting routes that encourage leisurely exploration. Seating and shaded areas provide restful retreats and enhance usability for family and guests. Layered lighting schemes extend garden enjoyment into the evening while promoting safe navigation.</p>
+    <p>Adherence to design principles — repetition, contrast, balance, and rhythm — creates cohesive, harmonious landscapes. Layered planting schemes, combining trees, shrubs, perennials, and ground covers, provide depth, texture, and year-round interest. Accessibility considerations ensure easy garden maintenance and enjoyable use for individuals of all mobility levels. Including edible plants and sensory gardens stimulates not only visual delight but also nourishment and therapeutic benefits.</p>
+    <p>Integrating sustainable elements such as rain gardens, native pollinator habitats, and composting areas enriches ecosystem services and garden resilience. Embrace your site's natural features in the design process to celebrate the unique character of your outdoor space. Thoughtful irrigation and drainage planning prevent erosion and conserve water while maximizing plant health and aesthetic appeal.</p>
+  </section>
+
+
+
+  <section class="customer-satisfaction" aria-label="Customer satisfaction testimonials">
+    <h2>Our Customers Thrive With Us</h2>
+    <blockquote class="testimonial" aria-label="Testimonial from Emily R.">
+      “Thrive Wisp Gardening transformed my backyard into a lush paradise. Their team's professionalism, punctuality, and attention to detail exceeded all my expectations. I highly recommend their services for anyone wanting a stress-free, beautiful garden year-round.”
+      <footer class="testimonial-author">- Emily R.</footer>
+    </blockquote>
+    <blockquote class="testimonial" aria-label="Testimonial from David M.">
+      “Thanks to Thrive Wisp, my garden stays healthy and beautiful throughout every season. Their organic pest control really made a noticeable difference, and their team’s expert advice has been invaluable to me as a beginner gardener.”
+      <footer class="testimonial-author">- David M.</footer>
+    </blockquote>
+    <blockquote class="testimonial" aria-label="Testimonial from Lisa H.">
+      “The garden design service was fantastic. The team listened carefully, respected my vision, and brought it to life with creativity and expertise. Their maintenance service also keeps my garden looking immaculate week after week.”
+      <footer class="testimonial-author">- Lisa H.</footer>
+    </blockquote>
+  </section>
+
+  <section class="disclaimer container" aria-label="Service disclaimer">
+    <p><strong>Disclaimer:</strong> Thrive Wisp Gardening strives to provide the highest quality gardening services using sustainable and eco-friendly practices. Service availability and pricing are subject to seasonal variation and local conditions. All work is performed with the utmost care but natural variances in plant growth or weather may affect results. Customers agree to terms and conditions set forth in service contracts.</p>
+  </section>
+
+  <section id="contact" class="container" aria-label="Contact information and location">
+    <h2 style="color:#166534; font-weight:700; margin-top:64px; margin-bottom:16px;">Contact & Location</h2>
+    <address style="font-style:normal; font-size:1rem; color:#374151; line-height:1.5;">
+      Thrive Wisp Gardening<br />
+      25 Union Square W,<br />
+      New York, NY 10003, USA
+    </address>
+  </section>
+</main>
+
+<footer>
+  &copy; 2024 Thrive Wisp Gardening Services. All rights reserved.
+</footer>
+
+<script>
+  const nav = document.querySelector('nav');
+  const toggleBtn = document.querySelector('.mobile-nav-toggle');
+  toggleBtn.addEventListener('click', () => {
+    const expanded = toggleBtn.getAttribute('aria-expanded') === 'true' || false;
+    toggleBtn.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('open');
+  });
+
+  // Close mobile nav on link click
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', false);
+      }
+    });
+  });
+</script>
+</body>
+</html>
+
